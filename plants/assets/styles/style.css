@@ -1,0 +1,175 @@
+/* inter-regular - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/inter-v12-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("/assets/fonts/inter-v12-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/assets/fonts/inter-v12-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("/assets/fonts/inter-v12-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("/assets/fonts/inter-v12-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("/assets/fonts/inter-v12-latin-regular.svg#Inter") format("svg"); /* Legacy iOS */
+}
+/* inter-700 - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/inter-v12-latin-700.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("/assets/fonts/inter-v12-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/assets/fonts/inter-v12-latin-700.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("/assets/fonts/inter-v12-latin-700.woff")
+      format("woff"),
+    /* Modern Browsers */ url("/assets/fonts/inter-v12-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("/assets/fonts/inter-v12-latin-700.svg#Inter") format("svg"); /* Legacy iOS */
+}
+/* inika-regular - latin */
+@font-face {
+  font-family: "Inika";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/inika-v21-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("/assets/fonts/inika-v21-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/assets/fonts/inika-v21-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("/assets/fonts/inika-v21-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("/assets/fonts/inika-v21-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("/assets/fonts/inika-v21-latin-regular.svg#Inika") format("svg"); /* Legacy iOS */
+}
+/* inika-700 - latin */
+@font-face {
+  font-family: "Inika";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/inika-v21-latin-700.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("/assets/fonts/inika-v21-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/assets/fonts/inika-v21-latin-700.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("/assets/fonts/inika-v21-latin-700.woff")
+      format("woff"),
+    /* Modern Browsers */ url("/assets/fonts/inika-v21-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("/assets/fonts/inika-v21-latin-700.svg#Inika") format("svg"); /* Legacy iOS */
+}
+
+.body {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #636060;
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.header,
+.section-welcome,
+.section-service,
+.section-contacts {
+  background: #edf2ec;
+}
+
+.header-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 134px;
+  margin: auto 7.5%;
+}
+
+.header-block_logo {
+  cursor: pointer;
+  margin-left: 0.1em;
+  margin-bottom: 0.3em;
+}
+
+.header-block_nav {
+  width: 37%;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+}
+
+.nav-list_nav-item {
+  cursor: pointer;
+  list-style-type: none;
+  font-family: "Inika";
+  font-size: 16px;
+  line-height: 50px;
+  letter-spacing: 0em;
+}
+
+.nav-item_link {
+  text-decoration: none;
+  color: #010201;
+}
+
+.nav-item_active {
+  color: #e06733;
+}
+
+.section-welcome-block {
+  height: 478px;
+  display: flex;
+  margin: auto 7%;
+  padding-top: 3.7%;
+  gap: 10%;
+}
+
+.section-welcome-block_pic,
+.section-welcome-block_text-block {
+  width: 50%;
+}
+
+.text-block_header {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0em;
+  margin: 8% 0;
+}
+
+.header-accent {
+  color: #499a18;
+}
+
+.text-block_welcome-text {
+  font-size: 20px;
+  line-height: 35px;
+  letter-spacing: 0em;
+  width: 95%;
+}
+
+.text-block_button {
+  width: 158px;
+  height: 44px;
+  text-transform: uppercase;
+  margin: 4.8% auto;
+  border: 2px solid #E06733;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+}
