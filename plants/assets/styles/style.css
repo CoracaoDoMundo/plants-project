@@ -78,7 +78,6 @@ html {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   color: #636060;
-  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -131,7 +130,8 @@ html {
   color: #010201;
 }
 
-.nav-item_active {
+.nav-item_active,
+.nav-item_link:hover {
   color: #e06733;
 }
 
@@ -275,6 +275,12 @@ html {
   width: 161px;
 }
 
+.service-btn:hover,
+.text-block_button:hover {
+  background: #e06733;
+  color: #ffffff;
+}
+
 .card_img {
   display: block;
 }
@@ -368,6 +374,7 @@ html {
 
 .section-contacts-block {
   display: grid;
+  position: relative;
   grid-template-columns: 40% 19.7% 40%;
   padding-top: 3.5%;
 }
@@ -409,6 +416,10 @@ html {
   appearance: none;
 }
 
+.section-contacts-block_cities-selector:active {
+  background-color: #c1e698;
+}
+
 /* .section-contacts-block_cities-selector::after {
   content: "▼";
   padding: 0 8px;
@@ -423,6 +434,12 @@ html {
   pointer-events: none;
   box-sizing: border-box;
 } */
+
+.cities-selector_arrow {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+}
 
 .footer-block {
   display: flex;
