@@ -69,6 +69,10 @@
       url("/assets/fonts/inika-v21-latin-700.svg#Inika") format("svg"); /* Legacy iOS */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .body {
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
@@ -317,7 +321,7 @@
 }
 
 .rates-block {
-  border: 1px solid #E3E1D5;
+  border: 1px solid #e3e1d5;
   border-radius: 20px;
   width: 52%;
   padding: 7.2% 8.8% 0 8.5%;
@@ -360,4 +364,102 @@
 
 .section-prices {
   height: 560px;
+}
+
+.section-contacts-block {
+  display: grid;
+  grid-template-columns: 40% 19.7% 40%;
+  padding-top: 3.5%;
+}
+
+.section-contacts-block_pic {
+  display: flex;
+  margin-left: 19%;
+}
+
+.contacts_img {
+  display: block;
+}
+
+.section-contacts-block_header {
+  font-family: Inika, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: #499a18;
+  margin-top: 0.2em;
+  justify-self: center;
+}
+
+.section-contacts-block_cities-selector {
+  display: block;
+  position: relative;
+  background-color: #d6e7d2;
+  border: none;
+  margin: 16.5% 0 0 4%;
+  padding-left: 0.85em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 450px;
+  height: 50px;
+  font-family: "Inter";
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  color: #717171;
+  appearance: none;
+}
+
+/* .section-contacts-block_cities-selector::after {
+  content: "▼";
+  padding: 0 8px;
+  font-size: 12px;
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  z-index: 1;
+  text-align: center;
+  width: 10%;
+  height: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+} */
+
+.footer-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 130px;
+  color: #000000;
+  font-size: 20px;
+  line-height: 50px;
+  margin: 0 7.68%;
+}
+
+.github-link,
+.rsschool-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer-block_rsschool-link {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-block_copyright-info,
+.footer-block_rsschool-link,
+.footer-block_sm-block {
+  width: 30%;
+}
+
+.footer-block_copyright-info {
+  display: flex;
+  gap: 5.5%;
+}
+
+.footer-block_sm-block {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: .7em;
+  gap: 7.5%;
 }

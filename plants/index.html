@@ -21,19 +21,19 @@
           <nav class="header-block_nav">
             <ul class="nav-list">
               <li class="nav-list_nav-item">
-                <a href="" class="nav-item_link nav-item_active">Home</a>
+                <a href="#home" class="nav-item_link nav-item_active">Home</a>
               </li>
               <li class="nav-list_nav-item">
-                <a href="" class="nav-item_link">About us</a>
+                <a href="#about" class="nav-item_link">About us</a>
               </li>
               <li class="nav-list_nav-item">
-                <a href="" class="nav-item_link">Service</a>
+                <a href="#service" class="nav-item_link">Service</a>
               </li>
               <li class="nav-list_nav-item">
-                <a href="" class="nav-item_link">Price</a>
+                <a href="#price" class="nav-item_link">Price</a>
               </li>
               <li class="nav-list_nav-item">
-                <a href="" class="nav-item_link">Contacts</a>
+                <a href="#contacts" class="nav-item_link">Contacts</a>
               </li>
             </ul>
           </nav>
@@ -42,7 +42,7 @@
     </header>
     <main>
       <section class="section-welcome">
-        <div class="wrapper">
+        <div id="home" class="wrapper">
           <div class="section-welcome-block">
             <div class="section-welcome-block_pic">
               <img src="assets/img/leafs.png" alt="leafs picture" />
@@ -66,7 +66,7 @@
         </div>
       </section>
       <section class="section-about">
-        <div class="wrapper">
+        <div id="about" class="wrapper">
           <div class="section-about-block">
             <div class="section-about-text_text-block">
               <h2 class="text-block_header">
@@ -97,7 +97,7 @@
         </div>
       </section>
       <section class="section-service">
-        <div class="wrapper">
+        <div id="service" class="wrapper">
           <div class="section-service-block">
             <h2 class="text-block_header service-block_header">
               Service and our projects
@@ -177,7 +177,7 @@
         </div>
       </section>
       <section class="section-prices">
-        <div class="wrapper">
+        <div id="price" class="wrapper">
           <div class="section-prices-block">
             <div class="section-prices-block_rates">
               <h2 class="rates_header">Prices</h2>
@@ -217,17 +217,66 @@
               <a href="" class="service-btn_link"
                 ><button class="service-btn">Contact us</button></a
               >
-              <img src="assets/img/leafs_small.png" alt="small leafs picture" class="section-price-block_img">
+              <img
+                src="assets/img/leafs_small.png"
+                alt="small leafs picture"
+                class="section-price-block_img"
+              />
             </div>
           </div>
         </div>
       </section>
       <section class="section-contacts">
-        <div class="wrapper"></div>
+        <div id="contacts" class="wrapper">
+          <div class="section-contacts-block">
+            <div class="section-contacts-block_pic">
+              <img
+                src="assets/img/contact_woman.png"
+                alt=""
+                class="contacts_img"
+              />
+            </div>
+            <h2 class="section-contacts-block_header">Contact us</h2>
+            <select
+              name=""
+              id=""
+              class="section-contacts-block_cities-selector"
+            >
+              <option>City</option>
+              <option>New York City</option>
+            </select>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="wrapper"></div>
+      <div class="wrapper">
+        <div class="footer-block">
+          <div class="footer-block_copyright-info">
+            <span class="copyright">©</span>
+            <span class="year">2022</span>
+            <a href="https://github.com/CoracaoDoMundo" class="github-link"
+              >github</a
+            >
+          </div>
+          <div class="footer-block_rsschool-link">
+            <a href="https://rs.school/js-stage0/" class="rsschool-link"
+              >Rolling Scopes School</a
+            >
+          </div>
+          <div class="footer-block_sm-block">
+            <a href="https://www.instagram.com" class="sm-block_link"
+              ><img src="assets/svg/insta_logo.svg" alt="instagram icon with link" class="sm_img" /></a
+            ><a href="https://www.facebook.com" class="sm-block_link"
+              ><img src="assets/svg/facebook_logo.svg" alt="facebook icon with link" class="sm_img" /></a
+            ><a href="https://www.twitter.com" class="sm-block_link"
+              ><img src="assets/svg/twitter_logo.svg" alt="twitter icon with link" class="sm_img" /></a
+            ><a href="https://www.pinterest.com" class="sm-block_link"
+              ><img src="assets/svg/pinterest_logo.svg" alt="pinterest icon with link" class="sm_img"
+            /></a>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="index.js"></script>
   </body>
