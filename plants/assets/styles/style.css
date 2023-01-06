@@ -170,10 +170,13 @@ html {
 }
 
 .text-block_button {
-  width: 158px;
-  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 154px;
+  height: 42px;
   text-transform: uppercase;
-  margin: 4.8% auto;
+  margin: 8.2% 0;
   border: 2px solid #e06733;
   border-radius: 10px;
   background: transparent;
@@ -263,6 +266,9 @@ html {
 }
 
 .service-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: transparent;
   cursor: pointer;
   font-family: "Inika", sans-serif;
@@ -271,8 +277,8 @@ html {
   color: #e06733;
   border: 1px solid #e06733;
   border-radius: 5px;
-  height: 50px;
-  width: 161px;
+  height: 48px;
+  width: 160px;
 }
 
 .service-btn:hover,
@@ -453,9 +459,14 @@ html {
 }
 
 .github-link,
-.rsschool-link {
+.rsschool-link,
+.button_link {
   text-decoration: none;
   color: #000000;
+}
+
+.service-btn_link {
+  text-decoration: none;
 }
 
 .footer-block_rsschool-link {
