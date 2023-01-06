@@ -79,7 +79,7 @@
 
 .wrapper {
   max-width: 1440px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .header,
@@ -178,7 +178,7 @@
 
 .section-about-block {
   display: flex;
-  margin: 9% 7.5% 6% 7.5%;
+  margin: 9% 7.5% 7.2% 7.5%;
 }
 
 .text-block_header {
@@ -188,6 +188,7 @@
   line-height: 52px;
   letter-spacing: 0em;
   color: #499a18;
+  margin: .8em 0 .6em 0;
 }
 
 .text-block_header_orange {
@@ -195,11 +196,74 @@
 }
 
 .text-block_text {
-  padding-top: .2em;
+  padding-top: 0.7em;
   font-size: 20px;
   line-height: 30px;
 }
 
 .plant-pic {
-  padding: .5% 0 0 24.3%;
+  padding: 0.5% 0 0 24.3%;
+}
+
+.section-service {
+  height: 1300px;
+}
+
+.section-service-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header btn btn"
+    "crd1 crd2 crd3"
+    "crd4 crd5 crd6";
+  margin: 0 7.6% 10% 7.6%;
+  padding-top: 0.5%;
+  column-gap: 9.5%;
+  row-gap: 5.2%;
+  /* height: 1200px; */
+}
+
+.service-block_header {
+  grid-area: header;
+}
+
+.section-service-block_btns {
+  display: flex;
+  align-items: center;
+  grid-area: btn;
+  gap: 4.95%;
+  padding-top: 1.5%;
+}
+
+.service-btn {
+  background: transparent;
+  cursor: pointer;
+  font-family: "Inika", sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  color: #e06733;
+  border: 1px solid #e06733;
+  border-radius: 5px;
+  height: 50px;
+  width: 161px;
+}
+
+.card_img {
+  display: block;
+}
+
+.card_header {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #e06733;
+  margin: .45em 0;
+}
+
+.card_text-block {
+  display: block;
+  text-align: center;
+  border: 1px solid #e3e1d5;
+  border-radius: 0px 0px 20px 20px;
+  padding-bottom: 1.2em;
 }
