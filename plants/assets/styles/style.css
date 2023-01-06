@@ -188,7 +188,7 @@
   line-height: 52px;
   letter-spacing: 0em;
   color: #499a18;
-  margin: .8em 0 .6em 0;
+  margin: 0.8em 0 0.6em 0;
 }
 
 .text-block_header_orange {
@@ -220,7 +220,6 @@
   padding-top: 0.5%;
   column-gap: 9.5%;
   row-gap: 5.2%;
-  /* height: 1200px; */
 }
 
 .service-block_header {
@@ -233,6 +232,30 @@
   grid-area: btn;
   gap: 4.95%;
   padding-top: 1.5%;
+}
+
+.crd1 {
+  grid-area: crd1;
+}
+
+.crd2 {
+  grid-area: crd2;
+}
+
+.crd3 {
+  grid-area: crd3;
+}
+
+.crd4 {
+  grid-area: crd4;
+}
+
+.crd5 {
+  grid-area: crd5;
+}
+
+.crd6 {
+  grid-area: crd6;
 }
 
 .service-btn {
@@ -257,7 +280,7 @@
   font-size: 20px;
   line-height: 20px;
   color: #e06733;
-  margin: .45em 0;
+  margin: 0.45em 0;
 }
 
 .card_text-block {
@@ -266,4 +289,75 @@
   border: 1px solid #e3e1d5;
   border-radius: 0px 0px 20px 20px;
   padding-bottom: 1.2em;
+}
+
+.section-prices-block {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2.7%;
+  margin: 0 7.6% 0 7.5%;
+}
+
+.section-prices-block_rates,
+.section-prices-block_contact {
+  width: 39%;
+}
+
+.rates_header {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  color: #000000;
+  margin: 0 0 12% 0;
+}
+
+.header_right {
+  text-align: end;
+  margin-bottom: 1em;
+}
+
+.rates-block {
+  border: 1px solid #E3E1D5;
+  border-radius: 20px;
+  width: 52%;
+  padding: 7.2% 8.8% 0 8.5%;
+}
+
+.rates-block_rate-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #edf2ec;
+  border-radius: 20px;
+  width: 250px;
+  height: 50px;
+  margin-bottom: 12.8%;
+}
+
+.rate-item_text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+  padding-left: 16.5%;
+}
+
+.rate-item_btn {
+  width: 16px;
+  height: 16px;
+  padding-right: 16%;
+}
+
+.section-prices-block_contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.section-price-block_img {
+  margin-top: 9.5%;
+}
+
+.section-prices {
+  height: 560px;
 }
