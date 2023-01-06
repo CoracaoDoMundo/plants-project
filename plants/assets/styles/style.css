@@ -140,11 +140,13 @@
 }
 
 .section-welcome-block_pic,
-.section-welcome-block_text-block {
+.section-welcome-block_text-block,
+.section-about-text_text-block,
+.section-about-block_pic {
   width: 50%;
 }
 
-.text-block_header {
+.text-block_main-header {
   font-size: 45px;
   font-weight: 700;
   line-height: 50px;
@@ -152,7 +154,7 @@
   margin: 8% 0;
 }
 
-.header-accent {
+.text-block_main-header_green {
   color: #499a18;
 }
 
@@ -168,8 +170,36 @@
   height: 44px;
   text-transform: uppercase;
   margin: 4.8% auto;
-  border: 2px solid #E06733;
+  border: 2px solid #e06733;
   border-radius: 10px;
   background: transparent;
   cursor: pointer;
+}
+
+.section-about-block {
+  display: flex;
+  margin: 9% 7.5% 6% 7.5%;
+}
+
+.text-block_header {
+  font-family: "Inika", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 52px;
+  letter-spacing: 0em;
+  color: #499a18;
+}
+
+.text-block_header_orange {
+  color: #e06733;
+}
+
+.text-block_text {
+  padding-top: .2em;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.plant-pic {
+  padding: .5% 0 0 24.3%;
 }
