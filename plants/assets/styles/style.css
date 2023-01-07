@@ -487,7 +487,6 @@ html {
 
 .rsschool-link:hover,
 .github-link:hover {
-  /* text-shadow: #e06733 0px 0px 8px; */
   color:#e06733;
   transform: scale(1.1);
   transition: .3s;
@@ -500,8 +499,6 @@ html {
   }
 
 .sm_img:hover {
-  /* filter: drop-shadow(#e06733 0px 0px 8px); */
-  stroke:#e06733;
   fill:#e06733;
   transform: scale(1.1);
   transition: .3s;
