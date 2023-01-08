@@ -133,6 +133,7 @@ html {
 .nav-item_active,
 .nav-item_link:hover {
   color: #e06733;
+  font-weight: 700;
   transition: .3s;
 }
 
@@ -182,6 +183,7 @@ html {
   border-radius: 10px;
   background: transparent;
   cursor: pointer;
+  transition: .3s;
 }
 
 .section-about-block {
@@ -280,6 +282,7 @@ html {
   border-radius: 5px;
   height: 50px;
   width: 161px;
+  transition: .3s;
 }
 
 .service-btn:hover,
@@ -350,6 +353,11 @@ html {
   width: 250px;
   height: 50px;
   margin-bottom: 12.8%;
+}
+
+.rates-block_rate-item:hover {
+  cursor: pointer;
+  background: #D6E7D2;
 }
 
 .rate-item_text {
@@ -425,7 +433,7 @@ html {
   cursor: pointer;
 }
 
-.section-contacts-block_cities-selector:active {
+.section-contacts-block_cities-selector:hover {
   background-color: #c1e698;
 }
 
@@ -451,6 +459,7 @@ html {
 .button_link {
   text-decoration: none;
   color: #000000;
+  transition: .3s;
 }
 
 .service-btn_link {
@@ -483,6 +492,10 @@ html {
 
 .sm-block_item {
   list-style-type: none;
+}
+
+.sm_img {
+  transition: .3s; 
 }
 
 .rsschool-link:hover,
