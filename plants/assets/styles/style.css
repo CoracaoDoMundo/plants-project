@@ -7,14 +7,13 @@
   src: local(""),
     url("../fonts/inter-v12-latin-regular.eot?#iefix")
       format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/inter-v12-latin-regular.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("../fonts/inter-v12-latin-regular.woff") format("woff"),
+    /* IE6-IE8 */ url("../fonts/inter-v12-latin-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/inter-v12-latin-regular.woff")
+      format("woff"),
     /* Modern Browsers */ url("../fonts/inter-v12-latin-regular.ttf")
       format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/inter-v12-latin-regular.svg#Inter") format("svg"); /* Legacy iOS */
+    /* Safari, Android, iOS */ url("../fonts/inter-v12-latin-regular.svg#Inter")
+      format("svg"); /* Legacy iOS */
 }
 /* inter-700 - latin */
 @font-face {
@@ -23,15 +22,14 @@
   font-weight: 700;
   src: url("../fonts/inter-v12-latin-700.eot"); /* IE9 Compat Modes */
   src: local(""),
-    url("../fonts/inter-v12-latin-700.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/inter-v12-latin-700.eot?#iefix") format("embedded-opentype"),
     /* IE6-IE8 */ url("../fonts/inter-v12-latin-700.woff2") format("woff2"),
     /* Super Modern Browsers */ url("../fonts/inter-v12-latin-700.woff")
       format("woff"),
     /* Modern Browsers */ url("../fonts/inter-v12-latin-700.ttf")
       format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/inter-v12-latin-700.svg#Inter") format("svg"); /* Legacy iOS */
+    /* Safari, Android, iOS */ url("../fonts/inter-v12-latin-700.svg#Inter")
+      format("svg"); /* Legacy iOS */
 }
 /* inika-regular - latin */
 @font-face {
@@ -42,14 +40,13 @@
   src: local(""),
     url("../fonts/inika-v21-latin-regular.eot?#iefix")
       format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/inika-v21-latin-regular.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("../fonts/inika-v21-latin-regular.woff") format("woff"),
+    /* IE6-IE8 */ url("../fonts/inika-v21-latin-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/inika-v21-latin-regular.woff")
+      format("woff"),
     /* Modern Browsers */ url("../fonts/inika-v21-latin-regular.ttf")
       format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/inika-v21-latin-regular.svg#Inika") format("svg"); /* Legacy iOS */
+    /* Safari, Android, iOS */ url("../fonts/inika-v21-latin-regular.svg#Inika")
+      format("svg"); /* Legacy iOS */
 }
 /* inika-700 - latin */
 @font-face {
@@ -58,15 +55,14 @@
   font-weight: 700;
   src: url("../fonts/inika-v21-latin-700.eot"); /* IE9 Compat Modes */
   src: local(""),
-    url("../fonts/inika-v21-latin-700.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/inika-v21-latin-700.eot?#iefix") format("embedded-opentype"),
     /* IE6-IE8 */ url("/assets/fonts/inika-v21-latin-700.woff2") format("woff2"),
     /* Super Modern Browsers */ url("../fonts/inika-v21-latin-700.woff")
       format("woff"),
     /* Modern Browsers */ url("../fonts/inika-v21-latin-700.ttf")
       format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/inika-v21-latin-700.svg#Inika") format("svg"); /* Legacy iOS */
+    /* Safari, Android, iOS */ url("../fonts/inika-v21-latin-700.svg#Inika")
+      format("svg"); /* Legacy iOS */
 }
 
 html {
@@ -134,14 +130,12 @@ html {
 .nav-item_link:hover {
   color: #e06733;
   font-weight: 700;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .section-welcome-block {
-  height: 478px;
   display: flex;
-  margin: auto 7%;
-  padding-top: 3.7%;
+  padding: 3.7% 7.2% 3.5% 7.2%;
   gap: 10%;
 }
 
@@ -183,7 +177,7 @@ html {
   border-radius: 10px;
   background: transparent;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .section-about-block {
@@ -215,21 +209,16 @@ html {
   padding: 0.5% 0 0 24.3%;
 }
 
-.section-service {
-  height: 1300px;
-}
-
 .section-service-block {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 330px 330px 330px;
   grid-template-areas:
     "header btn btn"
     "crd1 crd2 crd3"
     "crd4 crd5 crd6";
-  margin: 0 7.6% 10% 7.6%;
-  padding-top: 0.5%;
-  column-gap: 9.5%;
-  row-gap: 5.2%;
+  justify-content: space-between;
+  padding: 0.5% 7.5% 8.4% 7.5%;
+  row-gap: 3.4rem;
 }
 
 .service-block_header {
@@ -282,18 +271,19 @@ html {
   border-radius: 5px;
   height: 50px;
   width: 161px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .service-btn:hover,
 .text-block_button:hover {
   background: #e06733;
   color: #ffffff;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .card_img {
   display: block;
+  width: 100%;
 }
 
 .card_header {
@@ -315,8 +305,7 @@ html {
 .section-prices-block {
   display: flex;
   justify-content: space-between;
-  padding-top: 2.7%;
-  margin: 0 7.6% 0 7.5%;
+  margin: 2.7% 7.6% 8.9% 7.5%;
 }
 
 .section-prices-block_rates,
@@ -350,14 +339,13 @@ html {
   align-items: center;
   background: #edf2ec;
   border-radius: 20px;
-  width: 250px;
-  height: 50px;
+  height: 3.15em;
   margin-bottom: 12.8%;
 }
 
 .rates-block_rate-item:hover {
   cursor: pointer;
-  background: #D6E7D2;
+  background: #d6e7d2;
 }
 
 .rate-item_text {
@@ -384,20 +372,15 @@ html {
   margin-top: 9.5%;
 }
 
-.section-prices {
-  height: 560px;
-}
-
 .section-contacts-block {
   display: grid;
   position: relative;
-  grid-template-columns: 40% 19.7% 40%;
-  padding-top: 3.5%;
+  grid-template-columns: 39.5% 20.1% 40%;
+  padding: 3.6% 2.3% 0 7.6%;
 }
 
 .section-contacts-block_pic {
   display: flex;
-  margin-left: 19%;
 }
 
 .contacts_img {
@@ -411,7 +394,6 @@ html {
   line-height: 52px;
   color: #499a18;
   margin-top: 0.2em;
-  justify-self: center;
 }
 
 .section-contacts-block_cities-selector {
@@ -419,10 +401,10 @@ html {
   position: relative;
   background-color: #d6e7d2;
   border: none;
-  margin: 16.5% 0 0 4%;
+  margin: 18% 0 0 0;
   padding-left: 0.85em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: 450px;
+  width: 86%;
   height: 50px;
   font-family: "Inter";
   font-size: 20px;
@@ -439,8 +421,8 @@ html {
 
 .cities-selector_arrow {
   position: absolute;
-  top: 30%;
-  right: 10%;
+  top: 163px;
+  right: 145px;
 }
 
 .footer-block {
@@ -459,7 +441,7 @@ html {
 .button_link {
   text-decoration: none;
   color: #000000;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .service-btn_link {
@@ -486,7 +468,7 @@ html {
 .footer-block_sm-block {
   display: flex;
   justify-content: flex-end;
-  padding-top: .7em;
+  padding-top: 0.7em;
   gap: 7.5%;
 }
 
@@ -495,24 +477,419 @@ html {
 }
 
 .sm_img {
-  transition: .3s; 
+  transition: 0.3s;
 }
 
 .rsschool-link:hover,
 .github-link:hover {
-  color:#e06733;
+  color: #e06733;
   transform: scale(1.1);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .sm_img path {
-  stroke:inherit;
-  stroke-width:inherit;
-  fill:inherit;
-  }
+  stroke: inherit;
+  stroke-width: inherit;
+  fill: inherit;
+}
 
 .sm_img:hover {
-  fill:#e06733;
+  fill: #e06733;
   transform: scale(1.1);
-  transition: .3s;
+  transition: 0.3s;
+}
+
+@media (max-width: 1439px) {
+  .cities-selector_arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .section-service-block {
+    grid-template-columns: 280px 280px 280px;
+  }
+
+  /* .card_img {
+    width: 100%;
+  } */
+
+  .section-contacts-block_cities-selector {
+    width: 95%;
+  }
+
+  .section-contacts-block {
+    grid-template-columns: 33% 33% 33%;
+    justify-items: center;
+  }
+
+  .rates-block {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .section-welcome-block_img {
+    width: 400px;
+  }
+
+  .section-welcome-block_pic {
+    width: fit-content;
+  }
+
+  .section-welcome-block {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .text-block_main-header {
+    font-size: 2.5em;
+  }
+
+  .text-block_welcome-text,
+  .text-block_text {
+    font-size: 1em;
+  }
+
+  .plant-pic {
+    width: 380px;
+    padding: 0.5% 0 0 18%;
+  }
+
+  .text-block_header {
+    margin: 0.8em 0 0 0;
+  }
+
+  .section-service-block {
+    column-gap: 3%;
+  }
+
+  .card_text {
+    font-size: 0.8em;
+  }
+
+  .rates_header {
+    font-size: 2em;
+  }
+
+  .contacts_img {
+    width: 330px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header-block,
+  .section-welcome-block,
+  .section-prices-block,
+  .section-contacts-block,
+  .footer-block {
+    margin: auto 5%;
+  }
+
+  .section-about-block {
+    margin: 5% 5% 5% 5%;
+  }
+
+  .header-block_nav {
+    width: 60%;
+  }
+
+  .section-welcome-block_text-block {
+    width: 60%;
+  }
+
+  .section-welcome-block_img {
+    width: 320px;
+  }
+
+  .section-welcome-block {
+    padding: 3.7% 0;
+  }
+
+  .text-block_header {
+    font-size: 35px;
+  }
+
+  .section-service-block {
+    grid-template-columns: 250px 250px 250px;
+    padding: 0.5% 5% 8.4% 5%;
+  }
+
+  .section-prices-block {
+    margin: 5%;
+  }
+
+  .section-contacts-block {
+    padding: 3.6% 0 0 5%;
+  }
+
+  .section-contacts-block_pic {
+    margin: 0;
+  }
+
+  .section-contacts-block_header {
+    font-size: 2em;
+  }
+
+  .section-contacts-block_cities-selector {
+    width: 100%;
+    margin: 16.5% 0 0 0;
+  }
+}
+
+@media (max-width: 950px) {
+  .section-about-block {
+    flex-direction: column;
+  }
+
+  .section-about-text_text-block,
+  .section-about-block_pic {
+    width: 100%;
+  }
+
+  .section-about-text_text-block {
+    text-align: center;
+  }
+
+  .text-block_text {
+    font-size: 1.25em;
+  }
+
+  .plant-pic {
+    display: flex;
+    padding: 0;
+    margin: 8% auto;
+  }
+}
+
+@media (max-width: 870px) {
+  .header-block {
+    height: 117px;
+    align-items: center;
+    margin: 0 6%;
+  }
+
+  .nav-list {
+    margin: 0;
+  }
+
+  .nav-list_nav-item {
+    line-height: 2.5em;
+  }
+
+  .text-block_main-header {
+    margin: 0;
+  }
+
+  .section-about-block_pic {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section-welcome-block_img {
+    width: 280px;
+  }
+
+  .text-block_main-header {
+    font-size: 35px;
+  }
+
+  .plant-pic {
+    width: 250px;
+    padding: 0;
+    margin: 8%;
+  }
+
+  .section-service {
+    min-height: fit-content;
+  }
+
+  .section-service-block {
+    grid-template-columns: 45% 45%;
+    grid-template-areas:
+      "header header"
+      "btn btn"
+      "crd1 crd2"
+      "crd3 crd4"
+      "crd5 crd6";
+  }
+
+  .footer-block_rsschool-link {
+    width: 38%;
+    margin: 0;
+  }
+
+  .footer-block_sm-block {
+    padding-left: 0;
+    justify-content: center;
+    width: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-block {
+    margin: auto 6.6% auto 6.1%;
+    height: 120px;
+  }
+
+  .header-block_nav {
+    width: 67.5%;
+  }
+
+  .section-welcome-block,
+  .section-prices-block,
+  .section-contacts-block,
+  .footer-block {
+    margin: auto 6.5%;
+  }
+
+  .section-welcome-block {
+    padding: 5% 0 4.5% 0;
+    gap: 0;
+  }
+
+  .text-block_welcome-text {
+    margin: 7.5% 0 6.5% 1.5%;
+    line-height: 25px;
+    width: 85%;
+  }
+
+  .text-block_button {
+    margin: 9.2% 0;
+  }
+
+  .text-block_header {
+    margin: 0;
+    line-height: 48px;
+  }
+
+  .text-block_text {
+    text-align: left;
+    padding-top: 1.4em;
+  }
+
+  .section-about-block {
+    margin: 4.8% 6.5%;
+  }
+
+  .plant-pic {
+    width: 243px;
+    margin: 10.4% 10.4% 9.9% 9.7%;
+  }
+
+  .section-service-block {
+    grid-template-columns: 42% 42%;
+    padding: 7.7% 6.5% 9.1% 6.5%;
+    row-gap: 2.4rem;
+  }
+
+  .section-service-block_btns {
+    padding: 0;
+    gap: 5.7%;
+  }
+
+  .service-block_header {
+    width: 50%;
+    line-height: 46px;
+    margin-bottom: 0.4%;
+  }
+
+  .card_text {
+    font-size: 1em;
+    width: 80%;
+    margin: 4.6% 10% 0;
+  }
+
+  .section-prices-block {
+    margin: 4.8% 6.5% 13.5%;
+  }
+
+  .rates_header {
+    font-size: 2.15em;
+    margin: 0 0 15.2% 4.6%;
+  }
+
+  .header_right {
+    font-size: 1.56em;
+    margin: 31% 0 8.5% 6%;
+    line-height: 36px;
+  }
+
+  .section-prices-block_rates {
+    width: 51%;
+  }
+
+  .section-prices-block_contact {
+    width: 49%;
+  }
+
+  .section-price-block_img {
+    margin-top: 11%;
+  }
+
+  .rates-block {
+    padding: 9.8% 8.8% 0 12%;
+    width: 76.3%;
+  }
+
+  .rates-block_rate-item {
+    width: 95.6%;
+    margin-bottom: 12.4%;
+  }
+
+  .section-contacts-block {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "header-contact"
+      "selector"
+      "woman-pic";
+    justify-content: center;
+    padding: 4.1% 0 0 0;
+  }
+
+  .section-contacts-block_header {
+    grid-area: header-contact;
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .section-contacts-block_cities-selector {
+    grid-area: selector;
+    margin: 9.9% 0 0 0;
+    width: 67%;
+  }
+
+  .section-contacts-block_pic {
+    grid-area: woman-pic;
+    margin: 37.5% 0 0 3%;
+  }
+
+  .contacts_img {
+    width: 200px;
+  }
+
+  .footer-block {
+    flex-direction: column;
+    margin: 2.4% 6.5% auto 6.5%;
+  }
+
+  .footer-block_copyright-info {
+    justify-content: space-around;
+    width: 27.5%;
+  }
+
+  .footer-block_rsschool-link {
+    line-height: 33px;
+  }
+
+  .footer-block_sm-block {
+    width: 55%;
+    padding-top: 0;
+    margin-top: 2.4%;
+  }
+
+  .cities-selector_arrow {
+    display: block;
+    top: 209px;
+  }
 }
