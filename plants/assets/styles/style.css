@@ -76,6 +76,10 @@ html {
   color: #636060;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
@@ -88,6 +92,12 @@ html {
   background: #edf2ec;
 }
 
+.section-about {
+  background: #ffffff;
+}
+
+/* HEADER START */
+
 .header-block {
   display: flex;
   justify-content: space-between;
@@ -96,13 +106,13 @@ html {
   margin: auto 7.5%;
 }
 
-.header-block_logo {
+.header-block__logo {
   cursor: pointer;
   margin-left: 0.1em;
   margin-bottom: 0.3em;
 }
 
-.header-block_nav {
+.header-block__nav {
   width: 37%;
 }
 
@@ -112,7 +122,7 @@ html {
   padding-left: 0;
 }
 
-.nav-list_nav-item {
+.nav-list__nav-item {
   cursor: pointer;
   list-style-type: none;
   font-family: "Inika";
@@ -121,17 +131,45 @@ html {
   letter-spacing: 0em;
 }
 
-.nav-item_link {
+.nav-list__nav-item_link {
   text-decoration: none;
   color: #010201;
 }
 
 .nav-item_active,
-.nav-item_link:hover {
+.nav-list__nav-item_link:hover {
   color: #e06733;
   font-weight: 700;
   transition: 0.3s;
 }
+
+.header-block__burger-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 40px;
+  height: 24px;
+}
+
+.burger-icon__line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #717171;
+}
+
+.header-block__burger-shadow {
+  display: none;
+}
+
+.header-block__nav-close {
+  display: none;
+}
+
+/* HEADER END */
+
+/* SECTIONS START */
 
 .section-welcome-block {
   display: flex;
@@ -139,14 +177,14 @@ html {
   gap: 10%;
 }
 
-.section-welcome-block_pic,
-.section-welcome-block_text-block,
-.section-about-text_text-block,
-.section-about-block_pic {
+.section-welcome-block__pic,
+.section-welcome-block__text-block,
+.section-about-block__text-block,
+.section-about-block__pic {
   width: 50%;
 }
 
-.text-block_main-header {
+.section-welcome-block__text-block_main-header {
   font-size: 45px;
   font-weight: 700;
   line-height: 50px;
@@ -154,18 +192,18 @@ html {
   margin: 8% 0;
 }
 
-.text-block_main-header_green {
+.section-welcome-block__text-block_main-header-green {
   color: #499a18;
 }
 
-.text-block_welcome-text {
+.section-welcome-block__text-block_welcome-text {
   font-size: 20px;
   line-height: 35px;
   letter-spacing: 0em;
   width: 95%;
 }
 
-.text-block_button {
+.section-welcome-block__text-block_button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -275,7 +313,7 @@ html {
 }
 
 .service-btn:hover,
-.text-block_button:hover {
+.section-welcome-block__text-block_button:hover {
   background: #e06733;
   color: #ffffff;
   transition: 0.3s;
@@ -425,6 +463,10 @@ html {
   right: 145px;
 }
 
+/* SECTIONS END */
+
+/* FOOTER START */
+
 .footer-block {
   display: flex;
   align-items: center;
@@ -499,6 +541,10 @@ html {
   transition: 0.3s;
 }
 
+/* FOOTER END */
+
+/* ADAPTIVE START */
+
 @media (max-width: 1439px) {
   .cities-selector_arrow {
     display: none;
@@ -509,10 +555,6 @@ html {
   .section-service-block {
     grid-template-columns: 280px 280px 280px;
   }
-
-  /* .card_img {
-    width: 100%;
-  } */
 
   .section-contacts-block_cities-selector {
     width: 95%;
@@ -529,11 +571,11 @@ html {
 }
 
 @media (max-width: 1150px) {
-  .section-welcome-block_img {
+  .section-welcome-block__pic-img {
     width: 400px;
   }
 
-  .section-welcome-block_pic {
+  .section-welcome-block__pic {
     width: fit-content;
   }
 
@@ -542,11 +584,11 @@ html {
     justify-content: space-between;
   }
 
-  .text-block_main-header {
+  .section-welcome-block__text-block_main-header {
     font-size: 2.5em;
   }
 
-  .text-block_welcome-text,
+  .section-welcome-block__text-block_welcome-text,
   .text-block_text {
     font-size: 1em;
   }
@@ -590,16 +632,16 @@ html {
     margin: 5% 5% 5% 5%;
   }
 
-  .header-block_nav {
+  .header-block__nav {
     width: 60%;
   }
 
-  .section-welcome-block_text-block {
+  .section-welcome-block__text-block {
     width: 60%;
   }
 
-  .section-welcome-block_img {
-    width: 320px;
+  .section-welcome-block__pic-img {
+    width: 290px;
   }
 
   .section-welcome-block {
@@ -642,12 +684,12 @@ html {
     flex-direction: column;
   }
 
-  .section-about-text_text-block,
-  .section-about-block_pic {
+  .section-about-block__text-block,
+  .section-about-block__pic {
     width: 100%;
   }
 
-  .section-about-text_text-block {
+  .section-about-block__text-block {
     text-align: center;
   }
 
@@ -673,15 +715,15 @@ html {
     margin: 0;
   }
 
-  .nav-list_nav-item {
+  .nav-list__nav-item {
     line-height: 2.5em;
   }
 
-  .text-block_main-header {
+  .section-welcome-block__text-block_main-header {
     margin: 0;
   }
 
-  .section-about-block_pic {
+  .section-about-block__pic {
     display: flex;
     justify-content: center;
   }
@@ -690,7 +732,7 @@ html {
     width: 280px;
   }
 
-  .text-block_main-header {
+  .section-welcome-block__text-block_main-header {
     font-size: 35px;
   }
 
@@ -732,7 +774,7 @@ html {
     height: 120px;
   }
 
-  .header-block_nav {
+  .header-block__nav {
     width: 67.5%;
   }
 
@@ -744,17 +786,17 @@ html {
   }
 
   .section-welcome-block {
-    padding: 5% 0 4.5% 0;
+    padding: 5% 0 4.8% 0;
     gap: 0;
   }
 
-  .text-block_welcome-text {
+  .section-welcome-block__text-block_welcome-text {
     margin: 7.5% 0 6.5% 1.5%;
     line-height: 25px;
     width: 85%;
   }
 
-  .text-block_button {
+  .section-welcome-block__text-block_button {
     margin: 9.2% 0;
   }
 
@@ -769,7 +811,8 @@ html {
   }
 
   .section-about-block {
-    margin: 4.8% 6.5%;
+    margin: 0 6.5% 4.8% 6.5%;
+    padding-top: 4.9%;
   }
 
   .plant-pic {
@@ -861,7 +904,7 @@ html {
 
   .section-contacts-block_pic {
     grid-area: woman-pic;
-    margin: 37.5% 0 0 3%;
+    margin: 37.3% 0 0 3%;
   }
 
   .contacts_img {
@@ -870,7 +913,7 @@ html {
 
   .footer-block {
     flex-direction: column;
-    margin: 2.4% 6.5% auto 6.5%;
+    margin: 2.6% 6.5% 5% 6.5%;
   }
 
   .footer-block_copyright-info {
@@ -879,13 +922,13 @@ html {
   }
 
   .footer-block_rsschool-link {
-    line-height: 33px;
+    line-height: 32px;
   }
 
   .footer-block_sm-block {
     width: 55%;
     padding-top: 0;
-    margin-top: 2.4%;
+    margin-top: 2.7%;
   }
 
   .cities-selector_arrow {
@@ -893,3 +936,265 @@ html {
     top: 209px;
   }
 }
+
+@media (max-width: 700px) {
+  .cities-selector_arrow {
+    display: none;
+  }
+
+  .section-service-block {
+    grid-template-columns: 45% 45%;
+  }
+
+  .section-welcome-block__pic {
+    display: none;
+  }
+
+  .section-welcome-block {
+    justify-content: center;
+    padding: 5% 0 0 0;
+  }
+
+  .section-welcome-block__text-block {
+    width: 100%;
+  }
+
+  .footer-block_rsschool-link {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .section-service-block_btns {
+    flex-wrap: wrap;
+  }
+
+  .service-btn {
+    margin-bottom: 2%;
+  }
+
+  .section-prices-block {
+    flex-direction: column;
+  }
+
+  .section-prices-block_rates,
+  .section-prices-block_contact {
+    width: 100%;
+  }
+
+  .section-price-block_img {
+    display: none;
+  }
+
+  .section-prices-block_rates,
+  .section-prices-block_contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rates_header {
+    margin: 0 0 8%;
+  }
+
+  .header_right {
+    text-align: center;
+    margin: 10% 0 8.5%;
+  }
+
+  .section-contacts-block_cities-selector {
+    width: 90%;
+  }
+
+  /* BURGER MENU START */
+
+  .header-block__burger-icon {
+    display: flex;
+  }
+
+  .header-block__nav {
+    transform: translateY(-100%);
+    transition: 0.3s;
+    position: fixed;
+    width: calc(100vw - 8%);
+    height: 210px;
+    top: 0;
+    right: 0;
+    background: #ffffff;
+    z-index: 5;
+    padding: 8% 8% 8% 0;
+  }
+
+  .header-block__nav_active {
+    transform: translateY(0%);
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+  }
+
+  .nav-list__nav-item_link {
+    font-size: 20px;
+  }
+
+  .nav-item_active {
+    color: #010201;
+    font-weight: 400;
+  }
+
+  .header-block__nav-close {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    z-index: 6;
+  }
+
+  .header-block__nav-close_line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #010201;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .header-block__nav-close_line:first-child {
+    transform: translateY(500%) rotate(45deg);
+  }
+
+  .header-block__nav-close_line:last-child {
+    transform: translateY(400%) rotate(-45deg);
+  }
+
+  .header-block__burger-shadow {
+    display: block;
+    z-index: -2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2a2a2a94;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  .shadow-active {
+    z-index: 1;
+    opacity: 1;
+    transition: 0.3s;
+  }
+
+  /* BURGER MENU END */
+}
+
+@media (max-width: 450px) {
+  .nav-list__nav-item {
+    font-size: 13px;
+  }
+
+  .section-welcome-block__text-block_main-header {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .section-welcome-block__text-block_button {
+    width: 100px;
+    height: 34.14px;
+    font-size: 10px;
+    line-height: 20px;
+  }
+
+  .text-block_header,
+  .section-contacts-block_header {
+    font-size: 25px;
+    font-weight: 400;
+  }
+
+  .text-block_text {
+    font-size: 15px;
+    line-height: 25px;
+    padding-top: 0;
+  }
+
+  .plant-pic {
+    width: 150px;
+    margin: 5%;
+  }
+
+  .service-btn {
+    max-width: 121px;
+    height: 35px;
+    font-size: 15px;
+  }
+
+  .section-service-block {
+    row-gap: 2rem;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "header"
+      "btn"
+      "crd1"
+      "crd2"
+      "crd3"
+      "crd4"
+      "crd5"
+      "crd6";
+    justify-items: center;
+  }
+
+  .service-block_header,
+  .section-service-block_btns {
+    justify-self: start;
+  }
+
+  .section-prices-block {
+    margin: 4.8% 6.5% 10%;
+  }
+
+  .rates_header {
+    font-size: 25px;
+  }
+
+  .rates-block {
+    width: 60%;
+    padding: 8% 8% 0;
+  }
+
+  .rate-item_text {
+    font-size: 15px;
+  }
+
+  .rates-block_rate-item {
+    width: 100%;
+  }
+
+  .header_right {
+    font-size: 20px;
+    width: 60%;
+  }
+
+  .contacts_img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 380px) {
+  .header-block {
+    height: 101px;
+  }
+
+  .header-block__burger-icon {
+    padding-bottom: 7px;
+  }
+}
+
+/* ADAPTIVE END */

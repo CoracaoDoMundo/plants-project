@@ -13,30 +13,41 @@
     <header class="header">
       <div class="wrapper">
         <div class="header-block">
-          <div class="header-block_logo">
-            <a href="#" class="logo_link"
-              ><img src="assets/svg/main_logo.svg" alt="main logo plants"
+          <div class="header-block__logo">
+            <a href="#" class="header-block__logo-link"
+              ><img src="assets/svg/main_logo.svg" alt="main logo plants" class="header-block__logo-img"
             ></a>
           </div>
-          <nav class="header-block_nav">
+          <nav class="header-block__nav">
             <ul class="nav-list">
-              <li class="nav-list_nav-item">
-                <a href="#home" class="nav-item_link nav-item_active">Home</a>
+              <li class="nav-list__nav-item">
+                <a href="#home" class="nav-list__nav-item_link nav-item_active">Home</a>
               </li>
-              <li class="nav-list_nav-item">
-                <a href="#about" class="nav-item_link">About us</a>
+              <li class="nav-list__nav-item">
+                <a href="#about" class="nav-list__nav-item_link">About us</a>
               </li>
-              <li class="nav-list_nav-item">
-                <a href="#service" class="nav-item_link">Service</a>
+              <li class="nav-list__nav-item">
+                <a href="#service" class="nav-list__nav-item_link">Service</a>
               </li>
-              <li class="nav-list_nav-item">
-                <a href="#price" class="nav-item_link">Price</a>
+              <li class="nav-list__nav-item">
+                <a href="#price" class="nav-list__nav-item_link">Price</a>
               </li>
-              <li class="nav-list_nav-item">
-                <a href="#contacts" class="nav-item_link">Contacts</a>
+              <li class="nav-list__nav-item">
+                <a href="#contacts" class="nav-list__nav-item_link">Contacts</a>
               </li>
             </ul>
+            <div class="header-block__nav-close">
+              <span class="header-block__nav-close_line"></span>
+              <span class="header-block__nav-close_line"></span>
+            </div>
           </nav>
+          <div class="header-block__burger-icon burger">
+            <span class="burger-icon__line"></span>
+            <span class="burger-icon__line"></span>
+            <span class="burger-icon__line"></span>
+            <span class="burger-icon__line"></span>
+          </div>
+          <div class="header-block__burger-shadow"></div>
         </div>
       </div>
     </header>
@@ -44,21 +55,21 @@
       <section class="section-welcome">
         <div id="home" class="wrapper">
           <div class="section-welcome-block">
-            <div class="section-welcome-block_pic">
-              <img src="assets/img/leafs.png" alt="leafs picture" class="section-welcome-block_img">
+            <div class="section-welcome-block__pic">
+              <img src="assets/img/leafs.png" alt="leafs picture" class="section-welcome-block__pic-img">
             </div>
-            <div class="section-welcome-block_text-block">
-              <h1 class="text-block_main-header">
+            <div class="section-welcome-block__text-block">
+              <h1 class="section-welcome-block__text-block_main-header">
                 We grow
-                <span class="text-block_main-header_green">plants</span> and
+                <span class="section-welcome-block__text-block_main-header-green">plants</span> and
                 give you oxygen
               </h1>
-              <p class="text-block_welcome-text">
+              <p class="section-welcome-block__text-block_welcome-text">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s.
               </p>
-              <button class="text-block_button" onclick="location.href='#about'">Learn more</button>
+              <button class="section-welcome-block__text-block_button" onclick="location.href='#about'">Learn more</button>
             </div>
           </div>
         </div>
@@ -66,7 +77,7 @@
       <section class="section-about">
         <div id="about" class="wrapper">
           <div class="section-about-block">
-            <div class="section-about-text_text-block">
+            <div class="section-about-block__text-block">
               <h2 class="text-block_header">
                 We are
                 <span class="text-block_header_orange"
@@ -84,7 +95,7 @@
                 electronic typesetting, remaining essentially unchanged.
               </p>
             </div>
-            <div class="section-about-block_pic">
+            <div class="section-about-block__pic">
               <img
                 src="assets/img/houseplant.png"
                 class="plant-pic"
@@ -203,7 +214,7 @@
             <div class="section-prices-block_contact">
               <h2 class="rates_header header_right">
                 Our best
-                <span class="text-block_main-header_green">gardeners</span> are
+                <span class="section-welcome-block__text-block_main-header-green">gardeners</span> are
                 ready to help you
               </h2>
               <button class="service-btn" onclick="location.href='#contacts'">Contact us</button>
