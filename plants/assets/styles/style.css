@@ -313,7 +313,8 @@ html {
 }
 
 .service-btn:hover,
-.section-welcome-block__text-block_button:hover {
+.section-welcome-block__text-block_button:hover,
+.service-btn:active {
   background: #e06733;
   color: #ffffff;
   transition: 0.3s;
@@ -1333,3 +1334,17 @@ html {
 }
 
 /* ADAPTIVE END */
+
+/* INTERACTIVE STYLES START */
+
+.blur-effect {
+  filter: blur(2px);
+}
+
+.active-btn {
+  background: #e06733;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+/* INTERACTIVE STYLES END */
