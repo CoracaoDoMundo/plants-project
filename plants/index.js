@@ -47,42 +47,135 @@ const plantingBtn = document.querySelector(".planting-btn");
 const gardenCard = document.querySelectorAll(".garden");
 const lawnCard = document.querySelectorAll(".lawn");
 const plantingCard = document.querySelectorAll(".planting");
+const btn = document.querySelectorAll(".service-btn");
+const card = document.querySelectorAll(".section-service-block__card");
+
+function bluring() {
+  card.forEach((el) => el.classList.add("blur-effect"));
+}
+
+function clearing() {
+  card.forEach((el) => el.classList.remove("blur-effect"));
+}
 
 function gardens() {
-  if (gardenBtn.getAttribute("value") === "off") {
-    gardenBtn.setAttribute("value", "on");
-  } else {
-    gardenBtn.setAttribute("value", "off");
-  }
-  gardenBtn.classList.toggle("active-btn");
-  gardenCard.forEach((card) => card.classList.toggle("blur-effect"));
-};
+  if (
+    !lawnBtn.classList.contains("active-btn") &&
+    !plantingBtn.classList.contains("active-btn")
+  ) {
+    if (!gardenBtn.classList.contains("active-btn")) {
+      bluring();
+      gardenBtn.classList.toggle("active-btn");
+      gardenCard.forEach((el) => el.classList.remove("blur-effect"));
+    } else {
+      gardenBtn.classList.toggle("active-btn");
+      clearing();
+    }
+  } else if (
+    lawnBtn.classList.contains("active-btn") &&
+    !plantingBtn.classList.contains("active-btn")
+  ) {
+    if (!gardenBtn.classList.contains("active-btn")) {
+      gardenBtn.classList.toggle("active-btn");
+      gardenCard.forEach((el) => el.classList.remove("blur-effect"));
+    } else {
+      gardenBtn.classList.toggle("active-btn");
+      gardenCard.forEach((el) => el.classList.add("blur-effect"));
+    }
+  } else if (
+    !lawnBtn.classList.contains("active-btn") &&
+    plantingBtn.classList.contains("active-btn")
+  ) {
+    if (!gardenBtn.classList.contains("active-btn")) {
+      gardenBtn.classList.toggle("active-btn");
+      gardenCard.forEach((el) => el.classList.remove("blur-effect"));
+    } else {
+      gardenBtn.classList.toggle("active-btn");
+      gardenCard.forEach((el) => el.classList.add("blur-effect"));
+    }
+  } 
+}
 
-gardenBtn.addEventListener("click", gardens, false); // вешает слушатель
+gardenBtn.addEventListener("click", gardens, false);
 
 function lawns() {
-  if (lawnBtn.getAttribute("value") === "off") {
-    lawnBtn.setAttribute("value", "on");
-  } else {
-    lawnBtn.setAttribute("value", "off");
+  if (
+    !gardenBtn.classList.contains("active-btn") &&
+    !plantingBtn.classList.contains("active-btn")
+  ) {
+    if (!lawnBtn.classList.contains("active-btn")) {
+      bluring();
+      lawnBtn.classList.toggle("active-btn");
+      lawnCard.forEach((el) => el.classList.remove("blur-effect"));
+    } else {
+      lawnBtn.classList.toggle("active-btn");
+      clearing();
+    }
+  } else if (
+    gardenBtn.classList.contains("active-btn") &&
+    !plantingBtn.classList.contains("active-btn")
+  ) {
+    if (!lawnBtn.classList.contains("active-btn")) {
+      lawnBtn.classList.toggle("active-btn");
+      lawnCard.forEach((el) => el.classList.remove("blur-effect"));
+    } else {
+      lawnBtn.classList.toggle("active-btn");
+      lawnCard.forEach((el) => el.classList.add("blur-effect"));
+    }
+  } else if (
+    !gardenBtn.classList.contains("active-btn") &&
+    plantingBtn.classList.contains("active-btn")
+  ) {
+    if (!lawnBtn.classList.contains("active-btn")) {
+      lawnBtn.classList.toggle("active-btn");
+      lawnCard.forEach((el) => el.classList.remove("blur-effect"));
+    } else {
+      lawnBtn.classList.toggle("active-btn");
+      lawnCard.forEach((el) => el.classList.add("blur-effect"));
+    }
   }
-  lawnBtn.classList.toggle("active-btn");
-  lawnCard.forEach((card) => card.classList.toggle("blur-effect"));
-};
+}
 
 lawnBtn.addEventListener("click", lawns, false);
 
 function plantings() {
-  if (plantingBtn.getAttribute("value") === "off") {
-    plantingBtn.setAttribute("value", "on");
-  } else {
-    plantingBtn.setAttribute("value", "off");
+  if (
+    !gardenBtn.classList.contains("active-btn") &&
+    !lawnBtn.classList.contains("active-btn")
+  ) {
+    if (!plantingBtn.classList.contains("active-btn")) {
+      bluring();
+      plantingBtn.classList.toggle("active-btn");
+      plantingCard.forEach((el) => el.classList.remove("blur-effect"));
+    } else {
+      plantingBtn.classList.toggle("active-btn");
+      clearing();
+    }
+  } else if (
+    gardenBtn.classList.contains("active-btn") &&
+    !lawnBtn.classList.contains("active-btn")
+  ) {
+    if (!plantingBtn.classList.contains("active-btn")) {
+      plantingBtn.classList.toggle("active-btn");
+      plantingCard.forEach((el) => el.classList.remove("blur-effect"));
+    } else {
+      plantingBtn.classList.toggle("active-btn");
+      plantingCard.forEach((el) => el.classList.add("blur-effect"));
+    }
+  } else if (
+    !gardenBtn.classList.contains("active-btn") &&
+    lawnBtn.classList.contains("active-btn")
+  ) {
+    if (!plantingBtn.classList.contains("active-btn")) {
+      plantingBtn.classList.toggle("active-btn");
+      plantingCard.forEach((el) => el.classList.remove("blur-effect"));
+    } else {
+      plantingBtn.classList.toggle("active-btn");
+      plantingCard.forEach((el) => el.classList.add("blur-effect"));
+    }
   }
-  plantingBtn.classList.toggle("active-btn");
-  plantingCard.forEach((card) => card.classList.toggle("blur-effect"));
-};
+}
 
 plantingBtn.addEventListener("click", plantings, false);
-
 
 /* SECTION SERVICE INTERACTIVE BEHAVIOR END */

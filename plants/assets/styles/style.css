@@ -295,7 +295,8 @@ html {
   grid-area: crd6;
 }
 
-.service-btn {
+.service-btn,
+.service-btn-contact {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -313,8 +314,10 @@ html {
 }
 
 .service-btn:hover,
+.service-btn-contact:hover,
 .section-welcome-block__text-block_button:hover,
-.service-btn:active {
+.service-btn:active,
+.service-btn-contact:active {
   background: #e06733;
   color: #ffffff;
   transition: 0.3s;
@@ -485,10 +488,6 @@ html {
   text-decoration: none;
   color: #000000;
   transition: 0.3s;
-}
-
-.service-btn_link {
-  text-decoration: none;
 }
 
 .footer-block__rsschool-link {
@@ -971,7 +970,8 @@ html {
     flex-wrap: wrap;
   }
 
-  .service-btn {
+  .service-btn,
+  .service-btn-contact {
     margin-bottom: 2%;
   }
 
@@ -1132,7 +1132,8 @@ html {
     margin: 5%;
   }
 
-  .service-btn {
+  .service-btn,
+  .service-btn-contact {
     max-width: 121px;
     height: 35px;
     font-size: 15px;
@@ -1243,7 +1244,8 @@ html {
     margin: 0.7% 0 0;
   }
 
-  .service-btn {
+  .service-btn,
+  .service-btn-contact {
     margin-bottom: 2.8%;
   }
 
@@ -1339,6 +1341,11 @@ html {
 
 .blur-effect {
   filter: blur(2px);
+  transition: .3s;
+}
+
+.section-service-block__card {
+  transition: .3s;
 }
 
 .active-btn {
