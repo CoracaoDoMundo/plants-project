@@ -73,16 +73,7 @@ function gardens() {
     }
   } else if (
     lawnBtn.classList.contains("active-btn") &&
-    !plantingBtn.classList.contains("active-btn")
-  ) {
-    if (!gardenBtn.classList.contains("active-btn")) {
-      gardenBtn.classList.toggle("active-btn");
-      gardenCard.forEach((el) => el.classList.remove("blur-effect"));
-    } else {
-      gardenBtn.classList.toggle("active-btn");
-      gardenCard.forEach((el) => el.classList.add("blur-effect"));
-    }
-  } else if (
+    !plantingBtn.classList.contains("active-btn") ||
     !lawnBtn.classList.contains("active-btn") &&
     plantingBtn.classList.contains("active-btn")
   ) {
@@ -113,16 +104,7 @@ function lawns() {
     }
   } else if (
     gardenBtn.classList.contains("active-btn") &&
-    !plantingBtn.classList.contains("active-btn")
-  ) {
-    if (!lawnBtn.classList.contains("active-btn")) {
-      lawnBtn.classList.toggle("active-btn");
-      lawnCard.forEach((el) => el.classList.remove("blur-effect"));
-    } else {
-      lawnBtn.classList.toggle("active-btn");
-      lawnCard.forEach((el) => el.classList.add("blur-effect"));
-    }
-  } else if (
+    !plantingBtn.classList.contains("active-btn") ||
     !gardenBtn.classList.contains("active-btn") &&
     plantingBtn.classList.contains("active-btn")
   ) {
@@ -153,16 +135,7 @@ function plantings() {
     }
   } else if (
     gardenBtn.classList.contains("active-btn") &&
-    !lawnBtn.classList.contains("active-btn")
-  ) {
-    if (!plantingBtn.classList.contains("active-btn")) {
-      plantingBtn.classList.toggle("active-btn");
-      plantingCard.forEach((el) => el.classList.remove("blur-effect"));
-    } else {
-      plantingBtn.classList.toggle("active-btn");
-      plantingCard.forEach((el) => el.classList.add("blur-effect"));
-    }
-  } else if (
+    !lawnBtn.classList.contains("active-btn") ||
     !gardenBtn.classList.contains("active-btn") &&
     lawnBtn.classList.contains("active-btn")
   ) {
