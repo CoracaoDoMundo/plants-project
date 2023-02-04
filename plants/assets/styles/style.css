@@ -383,12 +383,13 @@ html {
   border-radius: 20px;
   height: 3.15em;
   margin-bottom: 12.8%;
-  transition: .3s;
+  transition: 0.3s;
   overflow: hidden;
 }
 
 .rates-block__rate-item:hover {
   background: #d6e7d2;
+  transition: 0.3s;
 }
 
 .rates-item__container {
@@ -638,8 +639,8 @@ html {
 
 .open-accordion {
   background: #d6e7d2;
-  min-height: 154px;
-  transition: .3s;
+  height: 154px;
+  transition: 0.3s;
 }
 
 .active-accordion-btn {
@@ -988,6 +989,7 @@ html {
   .rates-block__rate-item {
     width: 95.6%;
     margin-bottom: 12.4%;
+    transition: 0.3s;
   }
 
   .section-contacts-block {
@@ -1076,7 +1078,12 @@ html {
 
 @media (max-width: 620px) {
   .open-accordion {
-    min-height: 170px;
+    height: 160px;
+    transition: 0.3s;
+  }
+
+  .rate-item__order-btn {
+    margin-bottom: 7%;
   }
 }
 
@@ -1219,7 +1226,7 @@ html {
   /* BURGER MENU END */
 
   .open-accordion {
-    min-height: 154px;
+    height: 145px;
   }
 }
 
@@ -1298,11 +1305,13 @@ html {
   }
 
   .rate-item__text {
-    font-size: 15px;
+    font-size: 18px;
+    margin: 0.9em 0 0.5em 0;
   }
 
   .rates-block__rate-item {
     width: 100%;
+    transition: 0.3s;
   }
 
   .header_right {
@@ -1312,6 +1321,10 @@ html {
 
   .section-contacts-block__img {
     width: 150px;
+  }
+
+  .open-accordion {
+    height: 154px;
   }
 }
 
@@ -1389,6 +1402,7 @@ html {
 
   .rates-block__rate-item {
     margin-bottom: 7%;
+    transition: 0.3s;
   }
 
   .header_right {
@@ -1437,6 +1451,12 @@ html {
   .footer-block__sm-block {
     width: 113%;
     margin-top: 1.5%;
+  }
+}
+
+@media (max-width: 355px) {
+  .open-accordion {
+    height: 165px;
   }
 }
 

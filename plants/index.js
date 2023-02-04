@@ -72,10 +72,10 @@ function gardens() {
       clearing();
     }
   } else if (
-    lawnBtn.classList.contains("active-btn") &&
-    !plantingBtn.classList.contains("active-btn") ||
-    !lawnBtn.classList.contains("active-btn") &&
-    plantingBtn.classList.contains("active-btn")
+    (lawnBtn.classList.contains("active-btn") &&
+      !plantingBtn.classList.contains("active-btn")) ||
+    (!lawnBtn.classList.contains("active-btn") &&
+      plantingBtn.classList.contains("active-btn"))
   ) {
     if (!gardenBtn.classList.contains("active-btn")) {
       gardenBtn.classList.toggle("active-btn");
@@ -84,7 +84,7 @@ function gardens() {
       gardenBtn.classList.toggle("active-btn");
       gardenCard.forEach((el) => el.classList.add("blur-effect"));
     }
-  } 
+  }
 }
 
 gardenBtn.addEventListener("click", gardens, false);
@@ -103,10 +103,10 @@ function lawns() {
       clearing();
     }
   } else if (
-    gardenBtn.classList.contains("active-btn") &&
-    !plantingBtn.classList.contains("active-btn") ||
-    !gardenBtn.classList.contains("active-btn") &&
-    plantingBtn.classList.contains("active-btn")
+    (gardenBtn.classList.contains("active-btn") &&
+      !plantingBtn.classList.contains("active-btn")) ||
+    (!gardenBtn.classList.contains("active-btn") &&
+      plantingBtn.classList.contains("active-btn"))
   ) {
     if (!lawnBtn.classList.contains("active-btn")) {
       lawnBtn.classList.toggle("active-btn");
@@ -134,10 +134,10 @@ function plantings() {
       clearing();
     }
   } else if (
-    gardenBtn.classList.contains("active-btn") &&
-    !lawnBtn.classList.contains("active-btn") ||
-    !gardenBtn.classList.contains("active-btn") &&
-    lawnBtn.classList.contains("active-btn")
+    (gardenBtn.classList.contains("active-btn") &&
+      !lawnBtn.classList.contains("active-btn")) ||
+    (!gardenBtn.classList.contains("active-btn") &&
+      lawnBtn.classList.contains("active-btn"))
   ) {
     if (!plantingBtn.classList.contains("active-btn")) {
       plantingBtn.classList.toggle("active-btn");
@@ -152,3 +152,38 @@ function plantings() {
 plantingBtn.addEventListener("click", plantings, false);
 
 /* SECTION SERVICE INTERACTIVE BEHAVIOR END */
+
+/* SECTION PRICES ACCORDION FUNCTIONALITY START */
+
+const priceBtn = document.querySelectorAll(".rate-item__btn");
+const rateBlock = document.querySelectorAll(".rates-block__rate-item");
+const rateBlockLine = document.querySelectorAll(".rate-item__line");
+
+function rateBlockOpen() {
+  if (this.classList.contains("active-accordion-btn")) {
+    rateBlock.forEach((el) => el.classList.remove("open-accordion"));
+    priceBtn.forEach((el) => el.classList.remove("active-accordion-btn"));
+    rateBlockLine.forEach((el) => el.classList.remove("active-line"));
+    return;
+  }
+
+  for (let el of rateBlock) {
+    if (el.classList.contains("open-accordion")) {
+      el.classList.remove("open-accordion");
+      priceBtn.forEach((el) => el.classList.remove("active-accordion-btn"));
+      rateBlockLine.forEach((el) => el.classList.remove("active-line"));
+    }
+  }
+
+  this.closest(".rates-block__rate-item").classList.toggle("open-accordion");
+  this.closest(".rate-item__btn").classList.toggle("active-accordion-btn");
+  this.closest(".rates-block__rate-item")
+    .querySelector(".rate-item__line")
+    .classList.toggle("active-line");
+}
+
+for (let i = 0; i < priceBtn.length; i++) {
+  priceBtn[i].addEventListener("click", rateBlockOpen);
+}
+
+/* SECTION PRICES ACCORDION FUNCTIONALITY END */
