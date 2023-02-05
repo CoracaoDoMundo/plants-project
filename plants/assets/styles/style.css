@@ -136,8 +136,7 @@ html {
   color: #010201;
 }
 
-.nav-item_active,
-.nav-list__nav-item_link:hover {
+.nav-item_active {
   color: #e06733;
   font-weight: 700;
   transition: 0.3s;
@@ -210,6 +209,7 @@ html {
   width: 158px;
   height: 44px;
   text-transform: uppercase;
+  color: #000000;
   margin: 8.2% 0;
   border: 2px solid #e06733;
   border-radius: 10px;
@@ -266,6 +266,7 @@ html {
 .section-service-block__btns {
   display: flex;
   align-items: center;
+  position: relative;
   grid-area: btn;
   gap: 4.95%;
   padding-top: 1.5%;
@@ -313,9 +314,16 @@ html {
   transition: 0.3s;
 }
 
-.service-btn:hover,
-.service-btn-contact:hover,
-.section-welcome-block__text-block_button:hover,
+.service-warning {
+  display: none;
+  position: absolute;
+  top: 70%;
+  font-family: "Inika", sans-serif;
+  font-size: 20px;
+  line-height: 16px;
+  color: #e06733;
+}
+
 .service-btn:active,
 .service-btn-contact:active {
   background: #e06733;
@@ -385,11 +393,6 @@ html {
   margin-bottom: 12.8%;
   transition: 0.3s;
   overflow: hidden;
-}
-
-.rates-block__rate-item:hover {
-  background: #d6e7d2;
-  transition: 0.3s;
 }
 
 .rates-item__container {
@@ -475,11 +478,6 @@ html {
   transition: 0.3s;
 }
 
-.rate-item__order-btn:hover {
-  background-color: #c1e698;
-  transition: 0.3s;
-}
-
 .section-prices-block__contact {
   display: flex;
   flex-direction: column;
@@ -537,10 +535,6 @@ html {
   padding-left: 4%;
 }
 
-.section-contacts-block__cities-selector:hover {
-  background-color: #c1e698;
-}
-
 .section-contacts-block__cities-selector:active {
   background-color: #c1e698;
   box-shadow: none;
@@ -551,7 +545,7 @@ html {
   width: 16px;
   height: 16px;
   padding-left: 7.5%;
-  transition: .1s;
+  transition: 0.1s;
 }
 
 .section-contacts-block__cities-options-block {
@@ -570,19 +564,18 @@ html {
   color: #499a18;
   margin: 4% 5% 0 7.5%;
   border-bottom: 1px #d9d9d9 solid;
+  cursor: pointer;
 }
+
 
 .cities-options-block__city-name:first-child {
   padding-top: 7.6%;
   margin: 0 5% 0 7.5%;
-  color: #717171;
-  border-bottom: 1px #717171 solid;
 }
 
 .city-name {
   margin: 0;
   padding-left: 1.8%;
-  cursor: pointer;
 }
 
 .section-contact-block__chosen-city {
@@ -623,6 +616,7 @@ html {
   height: 26px;
   width: 27.4%;
   border: 1px solid #e06733;
+  color: #717171;
   border-radius: 5px;
   background: transparent;
   font-family: "Inika";
@@ -630,12 +624,6 @@ html {
   font-weight: 700;
   font-size: 10px;
   line-height: 13px;
-  transition: 0.3s;
-}
-
-.chosen-city__btn:hover {
-  background: #e06733;
-  color: #ffffff;
   transition: 0.3s;
 }
 
@@ -694,23 +682,10 @@ html {
   transition: 0.3s;
 }
 
-.rsschool-link:hover,
-.github-link:hover {
-  color: #e06733;
-  transform: scale(1.1);
-  transition: 0.3s;
-}
-
 .sm-block__item-svg path {
   stroke: inherit;
   stroke-width: inherit;
   fill: inherit;
-}
-
-.sm-block__item-svg:hover {
-  fill: #e06733;
-  transform: scale(1.1);
-  transition: 0.3s;
 }
 
 /* FOOTER END */
@@ -748,7 +723,7 @@ html {
 
 .active-select-btn {
   background: url(../img/select_btn_active.png) no-repeat;
-  transition: .1s;
+  transition: 0.1s;
 }
 
 .select-block-active {
@@ -769,6 +744,65 @@ html {
 }
 
 /* INTERACTIVE STYLES END */
+
+/* HOVER STYLES START */
+
+@media (hover: hover) {
+  .nav-item_active,
+  .nav-list__nav-item_link:hover {
+    color: #e06733;
+    font-weight: 700;
+    transition: 0.3s;
+  }
+
+  .service-btn:hover,
+  .service-btn-contact:hover,
+  .section-welcome-block__text-block_button:hover {
+    background: #e06733;
+    color: #ffffff;
+    transition: 0.3s;
+  }
+
+  .rates-block__rate-item:hover {
+    background: #d6e7d2;
+    transition: 0.3s;
+  }
+
+  .rate-item__order-btn:hover {
+    background-color: #c1e698;
+    transition: 0.3s;
+  }
+
+  .section-contacts-block__cities-selector:hover {
+    background-color: #c1e698;
+  }
+
+  .cities-options-block__city-name:hover {
+    color: #717171;
+    border-bottom: 1px #717171 solid;
+  }
+
+  .chosen-city__btn:hover {
+    background: #e06733;
+    color: #ffffff;
+    transition: 0.3s;
+  }
+
+  .rsschool-link:hover,
+  .github-link:hover {
+    color: #e06733;
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+
+  .sm-block__item-svg:hover {
+    fill: #e06733;
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+}
+
+/* HOVER STYLES END */
 
 /* ADAPTIVE START */
 
@@ -996,6 +1030,10 @@ html {
       "crd5 crd6";
   }
 
+  .service-warning {
+    top: -90%;
+  }
+
   .footer-block__rsschool-link {
     width: 38%;
     margin: 0;
@@ -1088,6 +1126,10 @@ html {
     font-size: 1em;
     width: 80%;
     margin: 4.6% 10% 0;
+  }
+
+  .service-warning {
+    top: -110%;
   }
 
   .section-prices-block {
@@ -1228,11 +1270,18 @@ html {
   .rate-item__order-btn {
     margin-bottom: 7%;
   }
+
+  .section-contacts-block__cities-selector,
+  .section-contacts-block__cities-options-block,
+  .section-contact-block__chosen-city {
+    width: 100%;
+  }
 }
 
 @media (max-width: 540px) {
-  .section-contact-block__chosen-city {
-    height: 240px;
+  .service-warning {
+    font-size: 1em;
+    top: -100%;
   }
 }
 
@@ -1250,6 +1299,10 @@ html {
   .service-btn,
   .service-btn-contact {
     margin-bottom: 2%;
+  }
+
+  .service-warning {
+    top: -40%;
   }
 
   .section-prices-block {
@@ -1281,14 +1334,8 @@ html {
     margin: 10% 0 8.5%;
   }
 
-  .section-contacts-block__cities-selector,
-  .section-contacts-block__cities-options-block,
   .section-contact-block__chosen-city {
-    width: 90%;
-  }
-
-  .section-contact-block__chosen-city {
-    height: 210px;
+    height: 190px;
   }
 
   /* BURGER MENU START */
@@ -1383,6 +1430,12 @@ html {
   .open-accordion {
     height: 145px;
   }
+
+  .chosen-city__info-block_general,
+  .chosen-city__info-block_changing {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -1446,6 +1499,11 @@ html {
     justify-self: start;
   }
 
+  .service-warning {
+    top: -50%;
+    font-size: .9em;
+  }
+
   .section-prices-block {
     margin: 4.8% 6.5% 10%;
   }
@@ -1480,12 +1538,6 @@ html {
 
   .open-accordion {
     height: 154px;
-  }
-}
-
-@media (max-width: 400px) {
-  .section-contact-block__chosen-city {
-    height: 230px;
   }
 }
 
@@ -1543,6 +1595,11 @@ html {
     margin: 0.7% 0 0;
   }
 
+  .service-warning {
+    top: -40%;
+    font-size: .8em;
+  }
+
   .service-btn,
   .service-btn-contact {
     margin-bottom: 2.8%;
@@ -1557,7 +1614,7 @@ html {
   }
 
   .rates__rates-block {
-    width: 55%;
+    width: 76.3%;
     padding: 9% 6% 4.5% 6%;
   }
 
@@ -1581,6 +1638,10 @@ html {
 
   .section-contacts-block__cities-selector {
     margin: 21.5% 0 0 0;
+  }
+
+  .section-contacts-block__cities-options-block {
+    height: 215px;
   }
 
   .cities-selector__arrow {
@@ -1626,8 +1687,8 @@ html {
     top: 148px;
   }
 
-  .section-contact-block__chosen-city {
-    height: 260px;
+  .service-warning {
+    font-size: .7em;
   }
 }
 
