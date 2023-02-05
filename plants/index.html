@@ -112,11 +112,11 @@
               Service and our projects
             </h2>
             <div class="section-service-block__btns">
-              <button class="service-btn">Gardens</button>
-              <button class="service-btn">Lawn</button>
-              <button class="service-btn">Planting</button>
+              <button class="service-btn garden-btn" value="off">Gardens</button>
+              <button class="service-btn lawn-btn" value="off">Lawn</button>
+              <button class="service-btn planting-btn" value="off">Planting</button>
             </div>
-            <div class="section-service-block__card crd1">
+            <div class="section-service-block__card crd1 garden">
               <picture class="card__img">
                 <source srcset="assets/img/service_photo_1_768.png" media="(max-width: 768px)">
                 <img src="assets/img/service_photo_1_1440.png" alt="picture of woman in the garden" class="card__img">
@@ -126,7 +126,7 @@
                 <p class="card__text">Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="section-service-block__card crd2">
+            <div class="section-service-block__card crd2 planting">
               <picture class="card__img">
                 <source srcset="assets/img/service_photo_2_768.png" media="(max-width: 768px)">
                 <img src="assets/img/service_photo_2_1440.png" alt="picture of a lemon in hand" class="card__img">
@@ -136,7 +136,7 @@
                 <p class="card__text">Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="section-service-block__card crd3">
+            <div class="section-service-block__card crd3 lawn">
               <picture class="card__img">
                 <source srcset="assets/img/service_photo_3_768.png" media="(max-width: 768px)">
                 <img src="assets/img/service_photo_3_1440.png" alt="picture of a garden spray in hands" class="card__img">
@@ -146,7 +146,7 @@
                 <p class="card__text">Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="section-service-block__card crd4">
+            <div class="section-service-block__card crd4 planting">
               <picture class="card__img">
                 <source srcset="assets/img/service_photo_4_768.png" media="(max-width: 768px)">
                 <img src="assets/img/service_photo_4_1440.png" alt="picture of woman working with flowers" class="card__img">
@@ -156,7 +156,7 @@
                 <p class="card__text">Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="section-service-block__card crd5">
+            <div class="section-service-block__card crd5 garden">
               <picture class="card__img">
                 <source srcset="assets/img/service_photo_5_768.png" media="(max-width: 768px)">
                 <img src="assets/img/service_photo_5_1440.png" alt="picture of flowers in pots" class="card__img">
@@ -166,7 +166,7 @@
                 <p class="card__text">Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="section-service-block__card crd6">
+            <div class="section-service-block__card crd6 planting">
               <picture class="card__img">
                 <source srcset="assets/img/service_photo_6_768.png" media="(max-width: 768px)">
                 <img src="assets/img/service_photo_6_1440.png" alt="picture of hands planting cactuses" class="card__img">
@@ -186,28 +186,40 @@
               <h2 class="rates__header">Prices</h2>
               <div class="rates__rates-block">
                 <div class="rates-block__rate-item">
-                  <p class="rate-item__text">Basics</p>
-                  <img
-                    src="assets/img/accordion_btn.png"
-                    alt="button to open basic rate details"
-                    class="rate-item__btn"
-                  >
+                  <div class="rates-item__container">
+                    <div class="rate-item__main-block">
+                      <p class="rate-item__text">Basics</p>
+                      <div class="rate-item__btn"></div>
+                    </div>
+                    <div class="rate-item__line"></div>
+                    <p class="rate-item__description">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                    <p class="rate-item__price"><span class="usd">$</span><span class="price">15 </span>/ per hour</p>
+                    <button class="rate-item__order-btn" onclick="location.href='#contacts'">Order</button>
+                  </div>
                 </div>
                 <div class="rates-block__rate-item">
-                  <p class="rate-item__text">Standard</p>
-                  <img
-                    src="assets/img/accordion_btn.png"
-                    alt="button to open standart rate details"
-                    class="rate-item__btn"
-                  >
+                  <div class="rates-item__container">
+                    <div class="rate-item__main-block">
+                      <p class="rate-item__text">Standard</p>
+                      <div class="rate-item__btn"></div>
+                    </div>
+                    <div class="rate-item__line"></div>
+                    <p class="rate-item__description">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                    <p class="rate-item__price"><span class="usd">$</span><span class="price">25 </span>/ per hour</p>
+                    <button class="rate-item__order-btn" onclick="location.href='#contacts'">Order</button>
+                  </div>
                 </div>
                 <div class="rates-block__rate-item">
-                  <p class="rate-item__text">Pro care</p>
-                  <img
-                    src="assets/img/accordion_btn.png"
-                    alt="button to open pro care rate details"
-                    class="rate-item__btn"
-                  >
+                  <div class="rates-item__container">
+                    <div class="rate-item__main-block">
+                      <p class="rate-item__text">Pro care</p>
+                      <div class="rate-item__btn"></div>
+                    </div>
+                    <div class="rate-item__line"></div>
+                    <p class="rate-item__description">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                    <p class="rate-item__price"><span class="usd">$</span><span class="price">35 </span>/ per hour</p>
+                    <button class="rate-item__order-btn" onclick="location.href='#contacts'">Order</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -217,7 +229,7 @@
                 <span class="section-welcome-block__text-block_main-header-green">gardeners</span> are
                 ready to help you
               </h2>
-              <button class="service-btn" onclick="location.href='#contacts'">Contact us</button>
+              <button class="service-btn-contact" onclick="location.href='#contacts'">Contact us</button>
               <img
                 src="assets/img/leafs_small.png"
                 alt="small leafs picture"
@@ -238,13 +250,41 @@
               >
             </div>
             <h2 class="section-contacts-block__header">Contact us</h2>
-            <select
-              class="section-contacts-block__cities-selector"
-            >
-              <option>City</option>
-              <option>New York City</option>
-            </select>
-            <img src="assets/img/accordion_btn.png" alt="" class="cities-selector__arrow">
+            <div class="section-contact-block__cities-selector-container">
+              <div class="section-contacts-block__cities-selector">
+                <p class="cities-selector__text">City</p>
+                <div class="cities-selector__arrow"></div>
+              </div>
+              <div class="section-contacts-block__cities-options-block">
+                <div class="cities-options-block__city-name">
+                  <span class="city-name" id="canandaigua">Canandaigua, NY</span>
+                </div>
+                <div class="cities-options-block__city-name">
+                  <span class="city-name" id="nyc">New York City</span>
+                </div>
+                <div class="cities-options-block__city-name">
+                  <span class="city-name" id="yonkers">Yonkers, NY</span>
+                </div>
+                <div class="cities-options-block__city-name">
+                  <span class="city-name" id="sherrill">Sherrill, NY</span>
+                </div>
+              </div>
+              <div class="section-contact-block__chosen-city">
+                <div class="chosen-city__info-block">
+                  <div class="chosen-city__info-block_general">
+                    <p class="info-block_general-city">City:</p>
+                    <p class="info-block_general-phone">Phone:</p>
+                    <p class="info-block_general-address">Office address:</p>
+                  </div>
+                  <div class="chosen-city__info-block_changing">
+                    <p class="info-block_changing-city"></p>
+                    <p class="info-block_changing-phone"></p>
+                    <p class="info-block_changing-address"></p>
+                  </div>
+                </div>
+                <button class="chosen-city__btn" onclick="callToOffice()">Call us</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
