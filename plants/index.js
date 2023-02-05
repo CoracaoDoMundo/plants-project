@@ -49,6 +49,7 @@ const lawnCard = document.querySelectorAll(".lawn");
 const plantingCard = document.querySelectorAll(".planting");
 const btn = document.querySelectorAll(".service-btn");
 const card = document.querySelectorAll(".section-service-block__card");
+const warning = document.querySelector(".service-warning");
 
 function bluring() {
   card.forEach((el) => el.classList.add("blur-effect"));
@@ -57,6 +58,10 @@ function bluring() {
 function clearing() {
   card.forEach((el) => el.classList.remove("blur-effect"));
 }
+
+function turnOff() {
+  warning.style.display = "none";
+};
 
 function gardens() {
   if (
@@ -84,7 +89,11 @@ function gardens() {
       gardenBtn.classList.toggle("active-btn");
       gardenCard.forEach((el) => el.classList.add("blur-effect"));
     }
+  } else {
+    warning.style.display = "block";
+    setTimeout(turnOff, 4000);
   }
+
 }
 
 gardenBtn.addEventListener("click", gardens, false);
@@ -115,6 +124,9 @@ function lawns() {
       lawnBtn.classList.toggle("active-btn");
       lawnCard.forEach((el) => el.classList.add("blur-effect"));
     }
+  } else {
+    warning.style.display = "block";
+    setTimeout(turnOff, 4000);
   }
 }
 
@@ -146,6 +158,9 @@ function plantings() {
       plantingBtn.classList.toggle("active-btn");
       plantingCard.forEach((el) => el.classList.add("blur-effect"));
     }
+  } else {
+    warning.style.display = "block";
+    setTimeout(turnOff, 4000);
   }
 }
 
@@ -198,14 +213,24 @@ const selectVars = document.querySelector(
 );
 const selectText = document.querySelector(".cities-selector__text");
 const selectBtn = document.querySelector(".cities-selector__arrow");
-const cityLine = document.querySelectorAll(".city-name");
+const cityLine = document.querySelectorAll(".cities-options-block__city-name");
 const cityBlock = document.querySelector(".section-contact-block__chosen-city");
+const cityOptionsBlock = document.querySelector(
+  ".section-contacts-block__cities-options-block"
+);
 const city = document.querySelector(".info-block_changing-city");
 const phone = document.querySelector(".info-block_changing-phone");
 const address = document.querySelector(".info-block_changing-address");
 const callUsBtn = document.querySelector(".chosen-city__btn");
-const womanPic = document.querySelector(".section-contacts-block__pic");
 let phoneNumber;
+
+const contactBlock = document.querySelector(".section-contacts");
+const womanPicBlock = document.querySelector(".section-contacts-block__pic");
+const womanPic = document.querySelector(".section-contacts-block__img");
+const contactHeader = document.querySelector(".section-contacts-block__header");
+const selectBlock = document.querySelector(
+  ".section-contact-block__cities-selector-container"
+);
 
 function selectOpen() {
   if (selectVars.classList.contains("select-block-active")) {
@@ -215,7 +240,7 @@ function selectOpen() {
     selectBtn.classList.remove("active-select-btn");
     selectText.textContent = "City";
     if (window.screen.width <= "768") {
-      womanPic.style.margin = "37.3% 0 0 3%";
+      womanPic.style.marginTop = "37.3%";
     }
     return;
   }
@@ -226,9 +251,9 @@ function selectOpen() {
   selectText.classList.add("select-active-text");
   selectBtn.classList.add("active-select-btn");
   if (window.screen.width <= "380") {
-    womanPic.style.margin = "3.9% 0 0 3%";
+    womanPicBlock.style.marginTop = "3.9%";
   } else if (window.screen.width <= "768") {
-    womanPic.style.margin = "2.3% 0 0 3%";
+    womanPicBlock.style.marginTop = "2.3%";
   }
 }
 
@@ -242,14 +267,14 @@ function cityBlockFillIn() {
   city.textContent = this.textContent;
 
   if (window.screen.width <= "380") {
-    womanPic.style.margin = "2% 0 0 3%";
-    cityBlock.style.margin = "2.5% 0 0 0";
+    womanPicBlock.style.marginTop = "4.9%";
+    cityBlock.style.marginTop = "6%";
   } else if (window.screen.width <= "500") {
-    womanPic.style.margin = "3.4% 0 0 3%";
-    cityBlock.style.margin = "4% 0 0 0";
+    womanPicBlock.style.marginTop = "3.4%";
+    cityBlock.style.marginTop = "3%";
   } else if (window.screen.width <= "768") {
-    womanPic.style.margin = "2.3% 0 0 3%";
-    cityBlock.style.margin = "3% 0 0 0";
+    womanPicBlock.style.marginTop = "2.3%";
+    cityBlock.style.marginTop = "3%";
   }
 
   if (this.id === "canandaigua") {
