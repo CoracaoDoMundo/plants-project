@@ -567,7 +567,6 @@ html {
   cursor: pointer;
 }
 
-
 .cities-options-block__city-name:first-child {
   padding-top: 7.6%;
   margin: 0 5% 0 7.5%;
@@ -1188,12 +1187,13 @@ html {
 
   .section-contacts-block__cities-selector {
     grid-area: selector;
-    margin: 9.9% 0 0 0;
+    margin: 4% 0 0 0;
     width: 67%;
   }
 
   .section-contacts-block__cities-options-block {
     width: 67%;
+    height: 276px;
   }
 
   .section-contact-block__chosen-city {
@@ -1276,12 +1276,16 @@ html {
   .section-contact-block__chosen-city {
     width: 100%;
   }
+
+  .service-warning {
+    top: -100%;
+    font-size: 1.1em;
+  }
 }
 
 @media (max-width: 540px) {
   .service-warning {
     font-size: 1em;
-    top: -100%;
   }
 }
 
@@ -1336,6 +1340,10 @@ html {
 
   .section-contact-block__chosen-city {
     height: 190px;
+  }
+
+  .section-contacts-block__cities-options-block {
+    height: 225px;
   }
 
   /* BURGER MENU START */
@@ -1438,6 +1446,18 @@ html {
   }
 }
 
+@media (max-width: 470px) {
+  .service-warning {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 460px) {
+  .section-contacts-block__cities-options-block {
+    height: 222px;
+  }
+}
+
 @media (max-width: 450px) {
   .nav-list__nav-item {
     font-size: 13px;
@@ -1501,7 +1521,7 @@ html {
 
   .service-warning {
     top: -50%;
-    font-size: .9em;
+    font-size: 0.8em;
   }
 
   .section-prices-block {
@@ -1597,7 +1617,7 @@ html {
 
   .service-warning {
     top: -40%;
-    font-size: .8em;
+    font-size: 0.7em;
   }
 
   .service-btn,
@@ -1637,11 +1657,59 @@ html {
   }
 
   .section-contacts-block__cities-selector {
-    margin: 21.5% 0 0 0;
+    margin: 10% 0 0 0;
+    width: 90%;
+    font-size: 1em;
+  }
+
+  .section-contact-block__chosen-city {
+    margin-left: 1.5%;
+    width: 84%;
+    height: 210px;
   }
 
   .section-contacts-block__cities-options-block {
+    width: 90%;
     height: 215px;
+  }
+
+  .chosen-city__info-block_general,
+  .chosen-city__info-block_changing {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .chosen-city__btn {
+    width: 44%;
+    margin-top: 1%;
+    margin-left: 4.1%;
+  }
+
+  .chosen-city__info-block_general {
+    width: 25%;
+  }
+
+  .chosen-city__info-block {
+    margin: 6% 0 0 10%;
+  }
+
+  .info-block_general-phone {
+    margin-top: 1.2em;
+    margin-bottom: 0;
+  }
+
+  .info-block_general-address {
+    margin-top: .6em;
+  }
+
+  .info-block_changing-phone {
+    margin-top: 1.2em;
+    margin-bottom: 0;
+  }
+
+  .info-block_changing-address {
+    margin-top: .7em;
+    padding-left: 5%;
   }
 
   .cities-selector__arrow {
@@ -1676,6 +1744,17 @@ html {
   }
 }
 
+@media (max-width: 370px) {
+  .chosen-city__info-block_general,
+  .chosen-city__info-block_changing {
+    font-size: 14px;
+  }
+
+  .section-contact-block__chosen-city {
+    height: 200px;
+  }
+}
+
 @media (max-width: 355px) {
   .open-accordion {
     height: 165px;
@@ -1688,7 +1767,12 @@ html {
   }
 
   .service-warning {
-    font-size: .7em;
+    font-size: 0.65em;
+  }
+
+  .chosen-city__info-block_general,
+  .chosen-city__info-block_changing {
+    font-size: 12px;
   }
 }
 
