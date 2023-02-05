@@ -159,7 +159,7 @@ const priceBtn = document.querySelectorAll(".rate-item__btn");
 const rateBlock = document.querySelectorAll(".rates-block__rate-item");
 const rateBlockLine = document.querySelectorAll(".rate-item__line");
 
-function rateBlockOpen() {
+function ratesBlock() {
   if (this.classList.contains("active-accordion-btn")) {
     rateBlock.forEach((el) => el.classList.remove("open-accordion"));
     priceBtn.forEach((el) => el.classList.remove("active-accordion-btn"));
@@ -183,7 +183,97 @@ function rateBlockOpen() {
 }
 
 for (let i = 0; i < priceBtn.length; i++) {
-  priceBtn[i].addEventListener("click", rateBlockOpen);
+  priceBtn[i].addEventListener("click", ratesBlock);
 }
 
 /* SECTION PRICES ACCORDION FUNCTIONALITY END */
+
+/* CUSTOM SELECT FUNCTIONALITY START */
+
+const select = document.querySelector(
+  ".section-contacts-block__cities-selector"
+);
+const selectVars = document.querySelector(
+  ".section-contacts-block__cities-options-block"
+);
+const selectText = document.querySelector(".cities-selector__text");
+const selectBtn = document.querySelector(".cities-selector__arrow");
+const cityLine = document.querySelectorAll(".city-name");
+const cityBlock = document.querySelector(".section-contact-block__chosen-city");
+const city = document.querySelector(".info-block_changing-city");
+const phone = document.querySelector(".info-block_changing-phone");
+const address = document.querySelector(".info-block_changing-address");
+const callUsBtn = document.querySelector(".chosen-city__btn");
+const womanPic = document.querySelector(".section-contacts-block__pic");
+let phoneNumber;
+
+function selectOpen() {
+  if (selectVars.classList.contains("select-block-active")) {
+    selectVars.classList.remove("select-block-active");
+    select.classList.remove("select-active");
+    selectText.classList.remove("select-active-text");
+    selectBtn.classList.remove("active-select-btn");
+    selectText.textContent = "City";
+    if (window.screen.width <= "768") {
+      womanPic.style.margin = "37.3% 0 0 3%";
+    }
+    return;
+  }
+
+  cityBlock.classList.remove("city-block-active");
+  selectVars.classList.add("select-block-active");
+  select.classList.add("select-active");
+  selectText.classList.add("select-active-text");
+  selectBtn.classList.add("active-select-btn");
+  if (window.screen.width <= "380") {
+    womanPic.style.margin = "3.9% 0 0 3%";
+  } else if (window.screen.width <= "768") {
+    womanPic.style.margin = "2.3% 0 0 3%";
+  }
+}
+
+select.addEventListener("click", selectOpen);
+
+function cityBlockFillIn() {
+  selectVars.classList.remove("select-block-active");
+  cityBlock.classList.add("city-block-active");
+  selectBtn.classList.remove("active-select-btn");
+  selectText.textContent = this.textContent;
+  city.textContent = this.textContent;
+
+  if (window.screen.width <= "380") {
+    womanPic.style.margin = "2% 0 0 3%";
+    cityBlock.style.margin = "2.5% 0 0 0";
+  } else if (window.screen.width <= "500") {
+    womanPic.style.margin = "3.4% 0 0 3%";
+    cityBlock.style.margin = "4% 0 0 0";
+  } else if (window.screen.width <= "768") {
+    womanPic.style.margin = "2.3% 0 0 3%";
+    cityBlock.style.margin = "3% 0 0 0";
+  }
+
+  if (this.id === "canandaigua") {
+    phone.textContent = "+1	585	393 0001";
+    address.textContent = "151 Charlotte Street";
+  } else if (this.id === "nyc") {
+    phone.textContent = "+1	212	456 0002";
+    address.textContent = "9 East 91st Street";
+  } else if (this.id === "yonkers") {
+    phone.textContent = "+1	914	678 0003";
+    address.textContent = "511 Warburton Ave";
+  } else if (this.id === "sherrill") {
+    phone.textContent = "+1	315	908 0004";
+    address.textContent = "14 WEST Noyes BLVD";
+  }
+}
+
+for (let i = 0; i < cityLine.length; i++) {
+  cityLine[i].addEventListener("click", cityBlockFillIn);
+}
+
+function callToOffice() {
+  phoneNumber = phone.textContent;
+  window.location.href = `tel:${phoneNumber}`;
+}
+
+/* CUSTOM SELECT FUNCTIONALITY END */
