@@ -61,7 +61,7 @@ function clearing() {
 
 function turnOff() {
   warning.style.display = "none";
-};
+}
 
 function gardens() {
   if (
@@ -91,9 +91,8 @@ function gardens() {
     }
   } else {
     warning.style.display = "block";
-    setTimeout(turnOff, 4000);
+    setTimeout(turnOff, 3000);
   }
-
 }
 
 gardenBtn.addEventListener("click", gardens, false);
@@ -126,7 +125,7 @@ function lawns() {
     }
   } else {
     warning.style.display = "block";
-    setTimeout(turnOff, 4000);
+    setTimeout(turnOff, 3000);
   }
 }
 
@@ -160,7 +159,7 @@ function plantings() {
     }
   } else {
     warning.style.display = "block";
-    setTimeout(turnOff, 4000);
+    setTimeout(turnOff, 3000);
   }
 }
 
@@ -239,8 +238,10 @@ function selectOpen() {
     selectText.classList.remove("select-active-text");
     selectBtn.classList.remove("active-select-btn");
     selectText.textContent = "City";
-    if (window.screen.width <= "768") {
-      womanPic.style.marginTop = "37.3%";
+    if (window.screen.width <= "380") {
+      womanPic.style.opacity = "1";
+      womanPic.style.position = "relative";
+      womanPic.style.marginTop = "30%";
     }
     return;
   }
@@ -251,7 +252,11 @@ function selectOpen() {
   selectText.classList.add("select-active-text");
   selectBtn.classList.add("active-select-btn");
   if (window.screen.width <= "380") {
-    womanPicBlock.style.marginTop = "3.9%";
+    womanPic.style.opacity = "0";
+    womanPic.style.position = "absolute";
+    womanPicBlock.style.marginTop = "20%";
+  } else if (window.screen.width <= "500") {
+    womanPicBlock.style.marginTop = "2.9%";
   } else if (window.screen.width <= "768") {
     womanPicBlock.style.marginTop = "2.3%";
   }
@@ -267,14 +272,17 @@ function cityBlockFillIn() {
   city.textContent = this.textContent;
 
   if (window.screen.width <= "380") {
+    womanPic.style.opacity = "0";
+    womanPic.style.position = "absolute";
     womanPicBlock.style.marginTop = "4.9%";
-    cityBlock.style.marginTop = "6%";
+    cityBlock.style.marginTop = "15%";
+    cityBlock.style.marginBottom = "5.8%";
   } else if (window.screen.width <= "500") {
-    womanPicBlock.style.marginTop = "3.4%";
-    cityBlock.style.marginTop = "3%";
+    womanPicBlock.style.marginTop = "3.3%";
+    cityBlock.style.marginTop = "7%";
   } else if (window.screen.width <= "768") {
     womanPicBlock.style.marginTop = "2.3%";
-    cityBlock.style.marginTop = "3%";
+    cityBlock.style.marginTop = "9.3%";
   }
 
   if (this.id === "canandaigua") {
