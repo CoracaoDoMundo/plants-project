@@ -2,9 +2,7 @@ Travel project by @coracaodomundo
 
 2st project with RS_School Q4-2022, 0 stage
 
-Deploy:
-
-https://coracaodomundo.github.io/plants-project/
+Deploy: https://coracaodomundo.github.io/plants-project/
 
 Realization:
 1. Adaptive layout for three formats (desktop, tablet and mobile);
